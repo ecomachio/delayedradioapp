@@ -25,7 +25,7 @@ export default function App() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <img src={logo} alt="Rádio Gaúcha" className="w-3/4 sm:w-1/2 mb-2" />
+        <img src={logo} alt="Rádio Gaúcha" className="w-3/4 sm:w-1/2 mb-2 max-w-md" />
         <h1 className="text-2xl sm:text-3xl font-bold mb-2">Radio com Delay</h1>
 
       </motion.div>
@@ -92,7 +92,8 @@ export default function App() {
         </section>
       </motion.div>
 
-      <div className="flex gap-2 mt-4">
+      <div className="flex flex-col items-center gap-2 mt-8">
+        <p>Made with ❤️ by <a href="https://github.com/ecomachio" target="_blank" rel="noopener noreferrer" className="text-slate-600">Edian Comachio</a></p>
         <a href="https://github.com/ecomachio/delayedradioapp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
           <GithubIcon className="w-6 h-6 text-slate-600" />
           Github
