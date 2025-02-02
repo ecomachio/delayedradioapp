@@ -7,7 +7,7 @@ function RadioPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [pauseTimeout, setPauseTimeout] = useState<number | null>(null);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [elapsedPauseTime, setElapsedPauseTime] = useState<any>(0);
+  const [_, setElapsedPauseTime] = useState<any>(0);
   const [pauseInterval, setPauseInterval] = useState<number | null>(null);
 
 
@@ -64,7 +64,7 @@ function RadioPlayer() {
     setIsPlaying(!isPlaying);
   };
 
-  const handleTimedPause = (seconds: number) => {
+  const _handleTimedPause = (seconds: number) => {
     const audio = audioRef.current;
     if (!audio || !isPlaying) return;
 
