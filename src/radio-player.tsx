@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Slider } from "@/components/ui/slider"
 import { Button } from "@/components/ui/button"
 import { Play, Pause, Rewind, FastForward } from "lucide-react"
 import Hls from 'hls.js';
@@ -67,10 +66,10 @@ export function RadioPlayer() {
     setIsPlaying(!isPlaying);
   };
 
-  const handleDelayChange = (value: number[]) => {
-    const delay = value[0];
-    setDelay(delay);
-  };
+  // const handleDelayChange = (value: number[]) => {
+  //   const delay = value[0];
+  //   setDelay(delay);
+  // };
 
   // Clean up timeout on unmount
   useEffect(() => {
@@ -81,18 +80,18 @@ export function RadioPlayer() {
     };
   }, [pauseInterval]);
 
-  const handler = (value: number[]) => {
-    setDelay(value[0]);
-    console.log(audioRef.current?.currentTime, audioRef.current?.duration);
-    audioRef.current?.play();
-    audioRef.current?.pause();
-    if (audioRef.current) {
-      audioRef.current.currentTime = 1;
-    }
-    setTimeout(() => {
-      togglePlay();
-    }, value[0] * 1000);
-  }
+  // const handler = (value: number[]) => {
+  //   setDelay(value[0]);
+  //   console.log(audioRef.current?.currentTime, audioRef.current?.duration);
+  //   audioRef.current?.play();
+  //   audioRef.current?.pause();
+  //   if (audioRef.current) {
+  //     audioRef.current.currentTime = 1;
+  //   }
+  //   setTimeout(() => {
+  //     togglePlay();
+  //   }, value[0] * 1000);
+  // }
 
   const goBack = (value: number) => {
     if (audioRef.current) {

@@ -1,8 +1,6 @@
 import { motion } from "framer-motion"
-import { RadioPlayer } from "./radio-player"
+
 import { default as RadioPlayerComponent } from "./RadioPlayer"
-import ReactPlayer from "react-player"
-import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 
 export default function App() {
