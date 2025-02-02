@@ -1,5 +1,13 @@
 {
- "name": "App",
+ "name": "Radio Gaúcha com delay",
+ "short_name": "Radio Delay",
+ "description": "Rádio Gaúcha com delay para sincronizar com a TV",
+ "theme_color": "#ffffff",
+ "background_color": "#ffffff",
+ "display": "standalone",
+ "orientation": "portrait",
+ "scope": "/",
+ "start_url": "/",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
